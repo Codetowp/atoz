@@ -3,7 +3,7 @@
 function atoz_related_post() {
 
 	$args = '';
-    $count = get_theme_mod( 'atoz_post_related_post_count' );
+    $count = get_theme_mod( 'atoz_post_related_post_count' ,3);
       
 	$args = wp_parse_args( $args, array(
 		'category__in'   => wp_get_post_categories( get_the_ID() ),

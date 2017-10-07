@@ -41,12 +41,11 @@
                 else
                 { ?>
 			 <section class="widget widget_archive">
-               <h2 class="widget-title">categories</h2>
+               <h2 class="widget-title"><?php esc_html_e( 'Footer Widgets 2', 'atoz'); ?></h2>
                <ul >
-                <li><a href="#"> Support <span >(01)</span> </a> </li><br>
-                <li><a href="#"> DESIGN<span >(10)</span> </a></li><br>
-                <li><a href="#"> USER INTERFACE<span>(100)</span> </a> </li><br>
-                <li><a href="#"> Wiki<span >(100)</span> </a></li>
+                <li>
+                   Go to Appearance -> Widgets and add upto four footer widgets you like.  
+                </li>
                </ul>
 			      </section>
               <?php }?>
@@ -61,21 +60,12 @@
                 else
                 { ?>
 			<section  class="widget recent-po ">
-                <h2 class="widget-title">Recent posts</h2>
+                <h2 class="widget-title"><?php esc_html_e( 'Footer Widgets 3', 'atoz'); ?></h2>
                  <ul class="media-list main-list ltst-upd">
-              <li class="media"> <a class="pull-left" href="#"> <img class="media-object img-responsive" src="<?php echo get_template_directory_uri();?>/img/blog-.jpg" alt="..."> </a>
-                <div class="media-body">
-                  <p class="media-heading"><a href="#">Name of the post</a></p>
-                  <p class="by-author"><a href="#">Read more</a></p>
-                </div>
-              </li>
-              <li class="media"> <a class="pull-left" href="#"> <img class="media-object img-responsive" src="<?php echo get_template_directory_uri();?>/img/blog-1.jpg" alt="..."> </a>
-                <div class="media-body">
-                  <p class="media-heading"><a href="#">Name of the post</a></p>
-                  <p class="by-author"><a href="#">Read more</a></p>
-                </div>
-              </li>
-            </ul>
+                    <li class="media"> Go to Appearance -> Widgets and add upto four footer widgets you like.
+                    </li>
+              
+                 </ul>
                 <?php }?>
            
           </section>
@@ -89,14 +79,9 @@
                 }
                 else
                 { ?>
-             <h2 class="widget-title">Follow us</h2>
+             <h2 class="widget-title"><?php esc_html_e( 'Footer Widgets 4', 'atoz'); ?></h2>
           <ul class="list-inline">
-            <li ><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li ><a href="#"><i class="fa fa-dribbble"></i></a></li>
-            <li ><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li ><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li ><a href="#"><i class="fa fa-youtube"></i></a></li>
-            <li ><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li > Go to Appearance -> Widgets and add upto four footer widgets you like.</li>
           </ul>
             <?php }?>
         </div>

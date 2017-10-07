@@ -26,6 +26,79 @@ function atoz_customize_register( $wp_customize ) {
 	$wp_customize->get_section( 'title_tagline' )->title  = __( 'Branding', 'atoz' );	 
     $wp_customize->remove_control('background_color');
     
+    
+    
+     class Customizer_Toggle_Control extends WP_Customize_Control 
+ {
+		public $type = 'ios';
+
+		/**
+		 * Enqueue scripts/styles.
+		 *
+		 * @since 3.4.0
+		 */
+		public function enqueue() 
+		{
+			/*wp_enqueue_script( 'customizer-toggle-control', get_stylesheet_directory_uri() . '/js/customizer-toggle-control.js', array( 'jquery' ), rand(), true );*/
+			wp_enqueue_style( 'pure-css-toggle-buttons', get_stylesheet_directory_uri() . '/css/pure-css-togle-buttons.css', array(), rand() );
+
+			$css = '
+				.disabled-control-title {
+					color: #a0a5aa;
+				}
+				input[type=checkbox].tgl-light:checked + .tgl-btn {
+			  		background: #0085ba;
+				}
+				input[type=checkbox].tgl-light + .tgl-btn {
+				  background: #a0a5aa;
+			  	}
+				input[type=checkbox].tgl-light + .tgl-btn:after {
+				  background: #f7f7f7;
+			  	}
+
+				input[type=checkbox].tgl-ios:checked + .tgl-btn {
+				  background: #0085ba;
+				}
+
+				input[type=checkbox].tgl-flat:checked + .tgl-btn {
+				  border: 4px solid #0085ba;
+				}
+				input[type=checkbox].tgl-flat:checked + .tgl-btn:after {
+				  background: #0085ba;
+				}
+
+			';
+			wp_add_inline_style( 'pure-css-toggle-buttons' , $css );
+		}
+
+		/**
+		 * Render the control's content.
+		 *
+		 * @author soderlind
+		 * @version 1.2.0
+		 */
+		public function render_content() 
+		{
+			?>
+			<label>
+				<div style="display:flex;flex-direction: row;justify-content: flex-start;">
+					<span class="customize-control-title" style="flex: 2 0 0; vertical-align: middle;"><?php echo esc_html( $this->label ); ?></span>
+					<input id="cb<?php echo $this->instance_number ?>" type="checkbox" class="tgl tgl-<?php echo $this->type?>" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); checked( $this->value() ); ?> />
+					<label for="cb<?php echo $this->instance_number ?>" class="tgl-btn"></label>
+				</div>
+				<?php if ( ! empty( $this->description ) ) : ?>
+				<span class="description customize-control-description"><?php echo $this->description; ?></span>
+				<?php endif; ?>
+			</label>
+			<?php
+		}
+	}
+
+
+    
+    
+    
+    
 	 /* Selective Refresh */
 	if ( isset( $wp_customize->selective_refresh ) ) {	
 	/*Search section */	
@@ -298,22 +371,28 @@ function atoz_customize_register( $wp_customize ) {
 			'description' 	=> 'Link to your favorite post/page/link from here. Change the default values as it will not reflect on homepage.',
 			'priority' 		=> 45,
 		));
-		  $wp_customize->add_setting( 'atoz_Featured_check', 
-				   array( 
-					   'default' 	=> 0,
-					   'transport' 	=> 'refresh',
-					   'sanitize_callback' => 'sanitize_text_field',
-				   ) );
-			
-		   $wp_customize->add_control( 'atoz_Featured_check', array(
-					'type'		=> 'checkbox',
-					'label' 	=> __( 'Enable this section', 'atoz' ),			
-					'section'  	=> 'atoz_calender',
-					
-			) );
+		
+    
+         $wp_customize->add_setting( 'atoz_Featured_check',
+				array(
+					'sanitize_callback' => 'atoz_sanitize_checkbox',
+					'default'           => '',
+                    'capability'        => 'manage_options',
+			        'transport'         => 'refresh',
+				)
+			);
+	    $wp_customize->add_control( new Customizer_Toggle_Control( $wp_customize, 'atoz_Featured_check', array(
+			'settings' => 'atoz_Featured_check',
+			'label'    => __( 'Enable this section?', 'atoz' ),
+			'section'  => 'atoz_calender',
+			'type'     => 'ios',
+            'priority' => 1,
+
+	    ) ) );
+    
 		$wp_customize->add_setting( 'atoz_title', 
 			   array( 
-				   'default' => 'Title of the item' ,
+				   'default'  => esc_html__('Title of the item', 'grit'),
 				   'transport' => 'postMessage',
 				   'sanitize_callback' => 'sanitize_text_field',
 			   ) );
@@ -323,9 +402,10 @@ function atoz_customize_register( $wp_customize ) {
 				'section' => 'atoz_calender',
 				'label' => __( "Heading", 'atoz' ),			
 			) );
-		 $wp_customize->add_setting( 'atoz_feat_desc', 
+    
+		$wp_customize->add_setting( 'atoz_feat_desc', 
 			   array( 
-				   'default' => 'Morbi scelerisque massa quis scelerisque fermentum. Phasellus ac nunc vehicula, malesuada orci ac, cursus turpis. Nunc eu nibh diam. Cras posuere hendrerit purus euismod tincidunt. Etiam posuere vel libero at ornare. Nulla sit amet iaculis mauris.' ,
+				   'default' => esc_html__('Morbi scelerisque massa quis scelerisque fermentum. Phasellus ac nunc vehicula, malesuada orci ac, cursus turpis. Nunc eu nibh diam. Cras posuere hendrerit purus euismod tincidunt. Etiam posuere vel libero at ornare. Nulla sit amet iaculis mauris.') ,
 				   'transport' => 'postMessage',
 				   'sanitize_callback' => 'sanitize_text_field',
 			   ) );
@@ -337,7 +417,7 @@ function atoz_customize_register( $wp_customize ) {
 			) );    
 		$wp_customize->add_setting( 'atoz_url_title', 
 			   array( 
-				   'default' => 'Add Button Text' ,
+				   'default' => esc_html__('Add Button Text') ,
 				   'transport' => 'postMessage',
 				   'sanitize_callback' => 'sanitize_text_field',
 			   ) );
@@ -349,7 +429,7 @@ function atoz_customize_register( $wp_customize ) {
 			) );    
 		$wp_customize->add_setting( 'atoz_url_link', 
 			   array( 
-				   'default' => '#' ,
+				   'default' => esc_html__('#') ,
 				   'transport' => 'postMessage',
 				   'sanitize_callback' => 'sanitize_text_field',
 			   ) );
@@ -400,7 +480,7 @@ function atoz_customize_register( $wp_customize ) {
 			);        
 		$wp_customize->add_setting( 'atoz_quote_bg_color', 
 				array(
-					'default' => '#fe9c46', 
+					'default' => esc_html__('#fe9c46'), 
 					'transport' => 'postMessage', 
 					'sanitize_callback' => 'sanitize_hex_color', 
 				) );
@@ -423,8 +503,17 @@ function atoz_customize_register( $wp_customize ) {
 				'label' => esc_attr__( "Background Transparency", 'atoz' ),
 				'description' => esc_attr__( 'Change the opacity of the above background color.', 'atoz' ),
 			) );
+    
+    
 }
 add_action( 'customize_register', 'atoz_customize_register' );
+
+
+
+
+
+
+
 
 
 function atoz_sanitize_integer( $input ) {
@@ -441,6 +530,14 @@ function atoz_sanitize_slidecat( $input ) {
         return '';
     }
 }
+function atoz_sanitize_checkbox( $input ) {
+    if ( $input == 1 ) {
+		return 1;
+    } else {
+		return 0;
+    }
+}
+
 
 /**
  * Render the site title for the selective refresh partial.

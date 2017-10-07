@@ -710,6 +710,8 @@ embed, iframe, object {
 	display: inline-block;
 }
 
+.custom-logo-link img{max-width: 126px; object-fit: cover; max-height:50px; }
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -1019,17 +1021,27 @@ a.eq-blocks-title {
 	color: #44484b;
 	font-size: 16px;
 }
-.pagination {
-	margin-right: 50px;
-	margin-top: 80px;
+
+
+.navigation.pagination{width: 100%; display: block; text-align: center;}
+
+.nav-links {
+margin: 0 auto; min-width: 280px;
 }
-.pagination .page-item a {
-	border-radius: 18px;
+.nav-links a.page-numbers {
+	border-radius: 50%;
 	background-color: #fff;
-	color: #44484b;
 	margin: 0 5px;
+    position: relative;
+display: inline-block;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    text-decoration: none;
+      border: 1px #ffd553 solid;
+    color: #44484b;
 }
-.pagination .page-item a:hover {
+.nav-links a:hover {
 	background-color: #ffd553;
 	border: 1px #ffd553 solid;
 	color: #fff;
@@ -1037,10 +1049,18 @@ a.eq-blocks-title {
 	-moz-transition: all ease-in-out 300ms;
 	-webkit-transition: all ease-in-out 300ms;
 }
-.pagination .page-item a:active {
+.nav-links span.current {
 	background-color: #ffd553;
 	border: 1px #ffd553 solid;
 	color: #fff;
+    margin: 0 5px;
+    position: relative;
+display: inline-block;
+    border-radius: 50%;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    text-decoration: none;
 }
 #service {
 	/*background: #ccc;*/

@@ -145,7 +145,7 @@
     //calender background color
     wp.customize( 'atoz_quote_bg_color', function( value ) {
 			value.bind( function( to ) {
-				$( '#service' ).css( 'background-color', to );
+				$( '#service:before' ).css( 'background-color', to );
 			} );
 		} );
     

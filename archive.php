@@ -27,7 +27,7 @@ get_header(); ?>
  
    <!--Blog Listing-->
       <article class="col-md-4 col-sm-4 text-center">
-		<div class="blog-box-inn eq-blocks"><span><?php echo get_option( 'date_format' );?></span>
+		<div class="blog-box-inn eq-blocks"><span><?php echo get_the_date('M d');?></span>
 			<?php the_post_thumbnail('atoz_recent_post'); ?>
             <h2><a href="<?php the_permalink();?>" class="eq-blocks-title"><?php the_title();?></a></h2>
 			<p><a href="#"><?php the_category();?></a></p>

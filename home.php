@@ -63,13 +63,18 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
         <?php endwhile; ?>
 		    <div class="clearfix"></div>
-     	<?php 	
-		the_posts_pagination( array(
-	        'prev_text' => '<i class="fa fa-chevron-left"></i> ' . __( 'Newer posts', 'atoz' ),
-	        'next_text' => __( 'Older posts', 'atoz' ) . ' <i class="fa fa-chevron-right"></i>' ,
-	    ) );
-		?>		
+            
+						<?php 	
+							the_posts_pagination( array(
+								'prev_text' =>   __( '<<', 'atoz' ),
+								'next_text' => __( '>>', 'atoz' )  ,
+							) );
+						?>
+           
+        
 		<?php wp_reset_postdata(); ?>
+                
+          
 		<?php else : ?>
 		<p><?php _e( 'Sorry, no posts matched your criteria.', 'atoz' ); ?></p>	
 		<?php endif; ?>	
@@ -78,20 +83,42 @@ get_header(); ?>
 </section>
 
 <!-- Featured Item --> 
-<?php if( get_theme_mod( 'atoz_Featured_check' ) == 1 && !is_paged()) {  ?>
-<section id="service" class="service" style="background-image:url(<?php echo esc_url( get_theme_mod( 'atoz_bg_image' ));?>);?>">
+<?php if( get_theme_mod( 'atoz_Featured_check' ) == 1 && !is_paged()) {  
+    $atoz_background_img   = esc_url( get_theme_mod( 'atoz_bg_image' ) );   
+    $atoz_background_img_static   = get_template_directory_uri()."/img/article-bg.jpg";
+    $back_grd_img = $atoz_background_img ? "$atoz_background_img" : "$atoz_background_img_static";  
+   $atoz_quote_bg_color=  esc_attr(get_theme_mod( 'atoz_quote_bg_color', esc_html__('#f4d629', 'grit')));
+?>
+<section id="service" class="service" style="background-image:url(<?php echo $back_grd_img;?>);?>;" style="background-color:<?php echo wp_kses_post($atoz_quote_bg_color);?>;">
   <div class="container">
     <div class="row">
-		<div class="col-md-7 serv-img">          
-          <?php       
-             $featured_img  = esc_url( get_theme_mod( 'atoz_image' ) );
-			 echo "<img src='$featured_img' class='img-responsive wow animated fadeInLeft'>";         
+		<div class="col-md-7 serv-img">   
+            
+          <?php
+               $background_img   = esc_url( get_theme_mod( 'atoz_image' ) );   
+               $background_img_static   = get_template_directory_uri()."/img/ser-1.png";
+               $image = $background_img ? "$background_img" : "$background_img_static";    
+			   echo "<img src='$image' class='img-responsive wow animated fadeInLeft'>";         
           ?>
 		</div>
 		<div class="col-md-5 text-center serv-content  wow animated fadeInRightBig">
-			<h4><?php if (  get_theme_mod( 'atoz_title' ) ) { echo get_theme_mod( 'atoz_title' );}?></h4>
-			<p> <?php if (  get_theme_mod( 'atoz_feat_desc' ) ) { echo get_theme_mod( 'atoz_feat_desc' );}?> </p>
-			<a href="<?php if (  get_theme_mod( 'atoz_url_link' ) ) { echo get_theme_mod( 'atoz_url_link' );}?>" style="background-color:<?php echo esc_attr(get_theme_mod( 'atoz_accent_color' ));?>" class="btn btn-outline-primary"><?php if (  get_theme_mod( 'atoz_url_title' ) ) { echo get_theme_mod( 'atoz_url_title' );}?></a> 
+            <?php   
+                $atoz_title  = get_theme_mod( 'atoz_title', esc_html__('Section Title', 'atoz' ));
+                if ($atoz_title != '') echo '<h4>' . wp_kses_post($atoz_title) . ' </h4>';
+            ?>
+            <?php   
+                $atoz_feat_desc  = get_theme_mod( 'atoz_feat_desc', esc_html__('Section Description', 'atoz' ));
+                if ($atoz_feat_desc != '') echo '<p>' . wp_kses_post($atoz_feat_desc) . ' </p>';
+            ?>
+            <?php 
+               $atoz_url_title  = get_theme_mod( 'atoz_url_title', esc_html__('Read More', 'grit' ));
+               $atoz_url_link=  get_theme_mod( 'atoz_url_link', esc_html__('#', 'grit') );
+              
+                                                                       
+                                                                       
+               if ($atoz_url_title != '' && $atoz_url_link != '') echo '<a href="' . esc_url($atoz_url_link) . '"  class="btn btn-outline-primary">  ' . wp_kses_post($atoz_url_title) . ' </a>'; 
+            ?>
+            
 		</div>
     </div>
   </div>
