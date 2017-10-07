@@ -14,7 +14,7 @@ function atoz_related_post() {
 
 	if ( $related->have_posts() ) {
 	?>
-		
+		<h4><?php _e('Related Posts', 'atoz'); ?></h4> 
 			<?php
             $num = 0;
 			while ( $related->have_posts() ) {
@@ -33,7 +33,7 @@ function atoz_related_post() {
                 }
                 else
                 {
-                    $post_thumbnail = get_the_post_thumbnail( get_the_ID(), 'img-responsive blog-img' );
+                    $post_thumbnail = get_the_post_thumbnail( get_the_ID('atoz_related_posts'), 'img-responsive blog-img' );
                 }
                 
 				$class_format = '';
@@ -47,8 +47,7 @@ function atoz_related_post() {
                 $categories = get_the_category($post->ID);
                 $cat_link = get_category_link($categories[0]->cat_ID);
                 
-				printf(
-					'<article class="col-md-4 col-sm-4">
+				printf('<article class="col-md-4 col-sm-4">
                         <div class="blog-box-inn eq-blocks"> 
                         <span>%s</span>
                         %s
