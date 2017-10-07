@@ -103,15 +103,15 @@ get_header(); ?>
 		</div>
 		<div class="col-md-5 text-center serv-content  wow animated fadeInRightBig">
             <?php   
-                $atoz_title  = get_theme_mod( 'atoz_title', esc_html__('Section Title', 'atoz' ));
+                $atoz_title  = get_theme_mod( 'atoz_title', esc_html__('TITLE OF THE ITEM', 'atoz' ));
                 if ($atoz_title != '') echo '<h4>' . wp_kses_post($atoz_title) . ' </h4>';
             ?>
             <?php   
-                $atoz_feat_desc  = get_theme_mod( 'atoz_feat_desc', esc_html__('Section Description', 'atoz' ));
+                $atoz_feat_desc  = get_theme_mod( 'atoz_feat_desc', esc_html__('Morbi scelerisque massa quis scelerisque fermentum. Phasellus ac nunc vehicula, malesuada orci ac, cursus turpis. Nunc eu nibh diam. Cras posuere hendrerit purus euismod tincidunt. Etiam posuere vel libero at ornare. Nulla sit amet iaculis mauris.', 'atoz' ));
                 if ($atoz_feat_desc != '') echo '<p>' . wp_kses_post($atoz_feat_desc) . ' </p>';
             ?>
             <?php 
-               $atoz_url_title  = get_theme_mod( 'atoz_url_title', esc_html__('Read More', 'grit' ));
+               $atoz_url_title  = get_theme_mod( 'atoz_url_title', esc_html__('Add Button Text', 'grit' ));
                $atoz_url_link=  get_theme_mod( 'atoz_url_link', esc_html__('#', 'grit') );
               
                                                                        
