@@ -22,12 +22,12 @@ function atoz_related_post() {
                 
                  if( get_theme_mod( 'atoz_related_post_check' ) == 1 ) { 
                      
-				$post_thumbnail = get_the_post_thumbnail( get_the_ID(), 'img-responsive blog-img' );
+				$post_thumbnail = get_the_post_thumbnail( get_the_ID(''), 'img-responsive blog-img' );
                      
                 }
                 if  ( get_the_post_thumbnail()=='')
                 {
-                     $background_img_relatedpost   = get_template_directory_uri()."/img/blog-1.jpg";
+                     $background_img_relatedpost   = get_template_directory_uri()."/img/default.jpg";
                     
                     $post_thumbnail= '<img src="'.$background_img_relatedpost.'" class="img-responsive blog-img">';
                 }

@@ -28,7 +28,13 @@ get_header(); ?>
    <!--Blog Listing-->
       <article class="col-md-4 col-sm-4 text-center">
 		<div class="blog-box-inn eq-blocks"><span><?php echo get_the_date('M d');?></span>
-			<?php the_post_thumbnail('atoz_recent_post'); ?>
+			            <?php
+            if  ( get_the_post_thumbnail()!='')
+            {
+             the_post_thumbnail('atoz_home_posts'); 
+            }else{?>
+            <img src="<?php echo get_template_directory_uri()?>/img/default.jpg" alt="<?php the_title_attribute(); ?>" class="img-responsive blog-img">
+            <?php }?>
             <h2><a href="<?php the_permalink();?>" class="eq-blocks-title"><?php the_title();?></a></h2>
 			<p><a href="#"><?php the_category();?></a></p>
 			<a href="<?php the_permalink();?>" class="btn btn-default"><?php _e('View', 'atoz');?></a> 

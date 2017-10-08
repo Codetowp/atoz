@@ -73,10 +73,12 @@
                 }
                 else
                 { ?>
+            <section  class="widget recent-po ">
              <h2 class="widget-title"><?php esc_html_e( 'Footer Widgets 4', 'atoz'); ?></h2>
            <div class="textwidget"><p>Go to Appearance -> Widgets and add upto four footer widgets you like.</p>
 				</div>
             <?php }?>
+            </section>
         </div>
       </div>
       <div class=" col-md-12 col-sm-12  fnav text-center">
