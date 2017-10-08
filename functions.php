@@ -1,10 +1,10 @@
 <?php
 /**
- * AtoZ functions and definitions
+ * atoz functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package AtoZ
+ * @package atoz
  */
 function atoz_custom_excerpt_length( $length ) {
     return 10;
@@ -28,8 +28,8 @@ function atoz_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on AtoZ, use a find and replace
-	 * to change 'atoz' to the name of your theme in all the template files.
+	 * If you're building a theme based on atoz use a find and replace
+	 * to change atoz to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'atoz', get_template_directory() . '/languages' );
 
@@ -53,7 +53,7 @@ function atoz_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'AtoZ Menu', 'atoz' ),
+		'menu-1' => esc_html__( 'atoz Menu', 'atoz' ),
 	) );
 
 	/*
@@ -160,7 +160,7 @@ add_action( 'wp_head', 'print_all_head_styles' );
 if (!function_exists('atoz_footer_bck_color'))  {
 	function atoz_footer_bck_color(){
 		echo '<style type="text/css" id="rijo-css">';
-		$footer_bck_color_value = get_theme_mod('atoz_footer_bck_color', '');
+		$footer_bck_color_value = get_theme_mod('atoz_footer_bck_color', 'atoz');
 		$append_color = sprintf( 'color: %s;',  $footer_bck_color_value );
 			// Output the styles.
 		if ( $footer_bck_color_value ) {

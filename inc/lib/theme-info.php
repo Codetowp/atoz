@@ -2,8 +2,7 @@
 /**
  * Class to display upsells.
  *
- * @package WordPress
- * @subpackage atoz
+ * @package atoz
  */
 if ( ! class_exists( 'WP_Customize_Control' ) ) {
 	return;

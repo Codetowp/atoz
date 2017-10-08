@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package AtoZ
+ * @package atoz
  */
 
 if ( ! function_exists( 'atoz_posted_on' ) ) :

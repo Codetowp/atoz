@@ -1,4 +1,9 @@
 <?php 
+/**
+ * Recent Posts Widget
+ *
+ * @package atoz
+ */
 
 class AtoZ_WP_Widget_Recent_Posts extends WP_Widget {
 
@@ -132,7 +137,7 @@ function AtoZ_WP_Widget_Recent_Posts() {
  // define widget title and description
  $widget_ops = array('classname' => 'widget_recent_entries', 'description' => __( "The most recent posts on your site with thumbnails", 'atoz') );
  // register the widget
- $this->WP_Widget('atoz-recent-posts', __('AtoZ Recent Posts', 'atoz'), $widget_ops);
+ $this->WP_Widget('atoz-recent-posts', __('atoz Recent Posts', 'atoz'), $widget_ops);
  }
 function AtoZ_WP_Widget_Recent_Posts_init()
 {

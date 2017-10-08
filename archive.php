@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package AtoZ
+ * @package atoz
  */
 
 get_header(); ?>
@@ -36,7 +36,7 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri()?>/img/default.jpg" alt="<?php the_title_attribute(); ?>" class="img-responsive blog-img">
             <?php }?>
             <h2><a href="<?php the_permalink();?>" class="eq-blocks-title"><?php the_title();?></a></h2>
-			<p><a href="#"><?php the_category();?></a></p>
+			<p><?php the_category();?></p>
 			<a href="<?php the_permalink();?>" class="btn btn-default"><?php _e('View', 'atoz');?></a> 
 		</div>
       </article>

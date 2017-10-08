@@ -1,4 +1,11 @@
 <?php
+/**
+ * Breadcrumbs of the theme
+ *
+ * @package atoz
+ */
+
+
 function get_breadcrumb() {
     echo '<a href="'.home_url().'" rel="nofollow">Home</a>';
     if (is_category() || is_single()) {

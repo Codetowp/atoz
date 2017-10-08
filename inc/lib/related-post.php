@@ -1,4 +1,9 @@
 <?php
+/**
+ * Related Posts
+ *
+ * @package atoz
+ */
 
 function atoz_related_post() {
 

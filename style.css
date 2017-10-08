@@ -1,12 +1,12 @@
 /*
-Theme Name: A to Z
-Theme URI: 
-Author: Burstfly
-Author URI: 
-Description: Description
+Theme Name: atoz
+Theme URI: https://dcrazed.com/themes/atoz/
+Author: Dcrazed
+Author URI: https://dcrazed.com/
+Description: atoz is a simple and creative personal blog theme for designers, developers who are into blogging. Showcase your freebies easily with this free wordpress blog theme.
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: atoz
 Tags:blog, three-columns, right-sidebar, custom-logo, full-width-template, theme-options
 
@@ -32,7 +32,7 @@ This theme, like WordPress, is licensed under the GPL.
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Normalize
+# Normalize (bootstrap has reset css)
 --------------------------------------------------------------*/
 
 
@@ -41,8 +41,7 @@ This theme, like WordPress, is licensed under the GPL.
 --------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
-@import url('https://fonts.googleapis.com/css?family=Oswald:300,400');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
 body, html {
 	font-family: 'Roboto', sans-serif;
 	text-rendering: optimizeLegibility !important;

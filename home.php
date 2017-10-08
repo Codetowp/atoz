@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package AtoZ
+ * @package atoz
  */
 
 get_header(); ?>
@@ -87,7 +87,7 @@ get_header(); ?>
     $atoz_background_img   = esc_url( get_theme_mod( 'atoz_bg_image' ) );   
     $atoz_background_img_static   = get_template_directory_uri()."/img/article-bg.jpg";
     $back_grd_img = $atoz_background_img ? "$atoz_background_img" : "$atoz_background_img_static";  
-   $atoz_quote_bg_color=  esc_attr(get_theme_mod( 'atoz_quote_bg_color', esc_html__('#f4d629', 'grit')));
+   $atoz_quote_bg_color=  esc_attr(get_theme_mod( 'atoz_quote_bg_color', esc_html__('#f4d629', 'atoz')));
 ?>
 <section id="service" class="service" style="background-image:url(<?php echo $back_grd_img;?>);?>;" style="background-color:<?php echo wp_kses_post($atoz_quote_bg_color);?>;">
   <div class="container">
@@ -111,8 +111,8 @@ get_header(); ?>
                 if ($atoz_feat_desc != '') echo '<p>' . wp_kses_post($atoz_feat_desc) . ' </p>';
             ?>
             <?php 
-               $atoz_url_title  = get_theme_mod( 'atoz_url_title', esc_html__('Add Button Text', 'grit' ));
-               $atoz_url_link=  get_theme_mod( 'atoz_url_link', esc_html__('#', 'grit') );
+               $atoz_url_title  = get_theme_mod( 'atoz_url_title', esc_html__('Add Button Text', 'atoz' ));
+               $atoz_url_link=  get_theme_mod( 'atoz_url_link', esc_attr('#', 'atoz') );
               
                                                                        
                                                                        

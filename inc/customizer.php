@@ -1,8 +1,8 @@
 <?php
 /**
- * AtoZ Theme Customizer
+ * atoz Theme Customizer
  *
- * @package AtoZ
+ * @package atoz
  */
 
 /**
@@ -392,7 +392,7 @@ function atoz_customize_register( $wp_customize ) {
     
 		$wp_customize->add_setting( 'atoz_title', 
 			   array( 
-				   'default'  => esc_html__('Title of the item', 'grit'),
+				   'default'  => esc_html__('Title of the item', 'atoz'),
 				   'transport' => 'postMessage',
 				   'sanitize_callback' => 'sanitize_text_field',
 			   ) );
@@ -405,7 +405,7 @@ function atoz_customize_register( $wp_customize ) {
     
 		$wp_customize->add_setting( 'atoz_feat_desc', 
 			   array( 
-				   'default' => esc_html__('Morbi scelerisque massa quis scelerisque fermentum. Phasellus ac nunc vehicula, malesuada orci ac, cursus turpis. Nunc eu nibh diam. Cras posuere hendrerit purus euismod tincidunt. Etiam posuere vel libero at ornare. Nulla sit amet iaculis mauris.') ,
+				   'default' => esc_html__('Morbi scelerisque massa quis scelerisque fermentum. Phasellus ac nunc vehicula, malesuada orci ac, cursus turpis. Nunc eu nibh diam. Cras posuere hendrerit purus euismod tincidunt. Etiam posuere vel libero at ornare. Nulla sit amet iaculis mauris.', 'atoz') ,
 				   'transport' => 'postMessage',
 				   'sanitize_callback' => 'sanitize_text_field',
 			   ) );
@@ -417,7 +417,7 @@ function atoz_customize_register( $wp_customize ) {
 			) );    
 		$wp_customize->add_setting( 'atoz_url_title', 
 			   array( 
-				   'default' => esc_html__('Add Button Text') ,
+				   'default' => esc_html__('Add Button Text', 'atoz') ,
 				   'transport' => 'postMessage',
 				   'sanitize_callback' => 'sanitize_text_field',
 			   ) );
@@ -429,7 +429,7 @@ function atoz_customize_register( $wp_customize ) {
 			) );    
 		$wp_customize->add_setting( 'atoz_url_link', 
 			   array( 
-				   'default' => esc_html__('#') ,
+				   'default' => '#',
 				   'transport' => 'postMessage',
 				   'sanitize_callback' => 'sanitize_text_field',
 			   ) );
@@ -480,7 +480,7 @@ function atoz_customize_register( $wp_customize ) {
 			);        
 		$wp_customize->add_setting( 'atoz_quote_bg_color', 
 				array(
-					'default' => esc_html__('#fe9c46'), 
+					'default' => '#fe9c46',
 					'transport' => 'postMessage', 
 					'sanitize_callback' => 'sanitize_hex_color', 
 				) );
@@ -492,7 +492,7 @@ function atoz_customize_register( $wp_customize ) {
 			) ) );			
 		$wp_customize->add_setting( 'atoz_transparnt', 
 			   array( 
-				   'default' => __( '.95', 'atoz' ),
+				   'default' => '.95',
 				   'transport' => 'refresh',
 				   'sanitize_callback' => 'sanitize_text_field',
 			   ) );
