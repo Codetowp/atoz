@@ -56,7 +56,7 @@ $r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' =
                 }
                 else
                 {
-                   echo $post_thumbnail = get_the_post_thumbnail( get_the_ID() );
+                   echo $post_thumbnail = get_the_post_thumbnail( get_the_ID('atoz_recent_post') );
                 }   
         ?>
                 </a>

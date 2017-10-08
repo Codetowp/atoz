@@ -14,7 +14,7 @@
             <?php
             if  ( get_the_post_thumbnail()!='')
             {
-             the_post_thumbnail('atoz_recent_post'); 
+             the_post_thumbnail('atoz_home_posts'); 
             }else{?>
             <img src="<?php echo get_template_directory_uri()?>/img/default.jpg" alt="<?php the_title_attribute(); ?>" class="img-responsive blog-img">
             <?php }?>

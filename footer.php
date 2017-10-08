@@ -42,11 +42,8 @@
                 { ?>
 			 <section class="widget widget_archive">
                <h2 class="widget-title"><?php esc_html_e( 'Footer Widgets 2', 'atoz'); ?></h2>
-               <ul >
-                <li>
-                   Go to Appearance -> Widgets and add upto four footer widgets you like.  
-                </li>
-               </ul>
+                <div class="textwidget"><p>Go to Appearance -> Widgets and add upto four footer widgets you like.</p>
+				</div>
 			      </section>
               <?php }?>
        
@@ -61,11 +58,8 @@
                 { ?>
 			<section  class="widget recent-po ">
                 <h2 class="widget-title"><?php esc_html_e( 'Footer Widgets 3', 'atoz'); ?></h2>
-                 <ul class="media-list main-list ltst-upd">
-                    <li class="media"> Go to Appearance -> Widgets and add upto four footer widgets you like.
-                    </li>
-              
-                 </ul>
+                  <div class="textwidget"><p>Go to Appearance -> Widgets and add upto four footer widgets you like.</p>
+				</div>
                 <?php }?>
            
           </section>
@@ -80,9 +74,8 @@
                 else
                 { ?>
              <h2 class="widget-title"><?php esc_html_e( 'Footer Widgets 4', 'atoz'); ?></h2>
-          <ul class="list-inline">
-            <li > Go to Appearance -> Widgets and add upto four footer widgets you like.</li>
-          </ul>
+           <div class="textwidget"><p>Go to Appearance -> Widgets and add upto four footer widgets you like.</p>
+				</div>
             <?php }?>
         </div>
       </div>

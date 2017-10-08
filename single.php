@@ -9,7 +9,7 @@
 
 get_header(); ?>
  <?php if(have_posts() ) : while(have_posts() ) : the_post(); ?>     
-<div id="single-banner" style="background-image:url('<?php echo the_post_thumbnail_url('full'); ?>'); "> 
+<div id="single-banner" style="background-image:url('<?php echo the_post_thumbnail_url('atoz_single_post'); ?>'); "> 
     <div class="content wow fdeInUp">
       <div class="container">
            <?php 
@@ -81,10 +81,11 @@ get_header(); ?>
           </ul>
         <div class="clearfix"></div>
         
+           
         <!--Author box-->
         <div class="author-box">
              <?php echo get_avatar( get_the_author_meta('user_email'), '100', '' ); ?>			 
-          <div class="author-box-title"><?php _e('Author :', 'atoz'); ?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php echo get_the_author_meta('display_name') ; ?></a></div>
+          <div class="author-box-title"><?php _e('Authored By:', 'atoz'); ?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php echo get_the_author_meta('display_name') ; ?></a></div>
           <div class="author-description"><?php the_author_meta('description'); ?></div>
           <div class="author_social"><a href="<?php echo get_the_author_meta('url') ; ?>"><i class="fa fa-globe"></i></a></div>
         </div>        
@@ -105,7 +106,7 @@ get_header(); ?>
 <section id="sb-imgbox">
   <div class="container">
     <div class="row ">     
-		<h4><?php _e('Related Posts', 'atoz'); ?></h4> 
+		
          <?php atoz_related_post(); ?>               
     </div>
   </div>

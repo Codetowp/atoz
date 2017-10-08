@@ -127,7 +127,7 @@ function atoz_featured_slider() {
           <?php
             if  ( get_the_post_thumbnail()!='')
             {
-             the_post_thumbnail(); 
+             the_post_thumbnail('atoz_slider'); 
             }else{?>
           <img src="<?php echo get_template_directory_uri()?>/img/photo2.jpg" class="img-responsive" width="80" >
           <?php } ?>

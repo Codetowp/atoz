@@ -106,7 +106,12 @@ function atoz_content_width() {
 }
 add_action( 'after_setup_theme', 'atoz_content_width', 0 );
 
-add_image_size( 'atoz_recent_post', 358, 240,  array( 'top', 'center' ) );
+
+add_image_size( 'atoz_slider', 1920, 1000,  array( 'top', 'center' ) );
+add_image_size( 'atoz_home_posts', 358, 240,  array( 'top', 'center' ) );
+add_image_size( 'atoz_related_posts', 358, 240,  array( 'top', 'center' ) );
+add_image_size( 'atoz_recent_post', 65, 65,  array( 'top', 'center' ) );
+add_image_size( 'atoz_single_post', 1920, 560,  array( 'top', 'center' ) );
 
 
 if (!function_exists('print_all_head_styles')){
