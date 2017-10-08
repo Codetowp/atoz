@@ -39,11 +39,11 @@ class atoz_info extends WP_Customize_Control {
 		$links = array(
 			array(
 				'name' => __( 'Documentation','atoz' ),
-				'link' => esc_url( '#' ),
+				'link' => esc_url( 'https://dcrazed.com/docs/atoz/' ),
 			),
 			array(
 				'name' => __( 'Demo','atoz' ),
-				'link' => esc_url( '#' ),
+				'link' => esc_url( 'http://atoz.dcrazed.com/' ),
 			),
 			array(
 				'name' => __( 'Leave a review','atoz' ),

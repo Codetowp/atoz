@@ -1,51 +1,54 @@
-# Copyright (C) 2017 Automattic
-# This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-12-23 16:00+0100\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: atoz\n"
+"POT-Creation-Date: 2017-10-08 19:16+0530\n"
+"PO-Revision-Date: 2017-10-08 19:13+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-12-23 16:00+0100\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:17
-#@ _s
+#: 404.php:16
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:21
-#@ _s
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
 
-#: 404.php:33
-#@ _s
-msgid "Most Used Categories"
+#: archive.php:40 template-parts/content.php:23
+msgid "View"
 msgstr ""
 
-#. translators: %1$s: smiley
-#: 404.php:51
-#, php-format
-#@ _s
-msgid "Try looking in the monthly archives. %1$s"
+#: archive.php:49 search.php:58
+msgid "Newer posts"
 msgstr ""
 
-#. translators: 1: title.
+#: archive.php:50 search.php:59
+msgid "Older posts"
+msgstr ""
+
 #: comments.php:34
 #, php-format
-#@ _s
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
-#. translators: 1: comment count number, 2: title.
 #: comments.php:40
 #, php-format
-#@ _s
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -53,187 +56,435 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: comments.php:50 comments.php:71
-#@ _s
 msgid "Comment navigation"
 msgstr ""
 
 #: comments.php:53 comments.php:74
-#@ _s
 msgid "Older Comments"
 msgstr ""
 
 #: comments.php:54 comments.php:75
-#@ _s
 msgid "Newer Comments"
 msgstr ""
 
 #: comments.php:88
-#@ _s
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:18
-#@ _s
-msgid "https://wordpress.org/"
+#: footer.php:28 functions.php:204
+msgid "Footer Widgets 1"
 msgstr ""
 
-#. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:20
-#, php-format
-#@ _s
-msgid "Proudly powered by %s"
+#: footer.php:44 functions.php:214
+msgid "Footer Widgets 2"
 msgstr ""
 
-#. translators: 1: Theme name, 2: Theme author.
-#: footer.php:25
-#, php-format
-#@ _s
-msgid "Theme: %1$s by %2$s."
+#: footer.php:60 functions.php:223
+msgid "Footer Widgets 3"
 msgstr ""
 
-#: functions.php:47
-#@ _s
-msgid "Primary"
+#: footer.php:77 functions.php:232
+msgid "Footer Widgets 4"
 msgstr ""
 
-#: functions.php:93
-#@ _s
+#: functions.php:56
+msgid "atoz Menu"
+msgstr ""
+
+#: functions.php:192
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:95
-#@ _s
+#: functions.php:194 functions.php:216 functions.php:225 functions.php:234
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:24
-#@ _s
-msgid "Skip to content"
+#: functions.php:206
+msgid "Add Widgets Here."
 msgstr ""
 
-#: header.php:44
-#@ _s
-msgid "Primary Menu"
+#: home.php:79
+msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#. translators: %s: post date.
+#: home.php:106
+msgid "TITLE OF THE ITEM"
+msgstr ""
+
+#: home.php:110 inc/customizer.php:408
+msgid ""
+"Morbi scelerisque massa quis scelerisque fermentum. Phasellus ac nunc "
+"vehicula, malesuada orci ac, cursus turpis. Nunc eu nibh diam. Cras posuere "
+"hendrerit purus euismod tincidunt. Etiam posuere vel libero at ornare. Nulla "
+"sit amet iaculis mauris."
+msgstr ""
+
+#: home.php:114 inc/customizer.php:420
+msgid "Add Button Text"
+msgstr ""
+
+#: inc/customizer.php:26
+msgid "Branding"
+msgstr ""
+
+#: inc/customizer.php:139
+msgid "Theme INFO"
+msgstr ""
+
+#: inc/customizer.php:158
+msgid "Navigation Text"
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "Sub Menu Bg"
+msgstr ""
+
+#: inc/customizer.php:183
+msgid "Menu Hover Color"
+msgstr ""
+
+#: inc/customizer.php:188
+msgid "Navigation Background"
+msgstr ""
+
+#: inc/customizer.php:199
+msgid "Accent Color"
+msgstr ""
+
+#: inc/customizer.php:200
+msgid "Add Accent Color to post,button."
+msgstr ""
+
+#: inc/customizer.php:210
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:220
+msgid "Footer Background"
+msgstr ""
+
+#: inc/customizer.php:230
+msgid "Font Awesome Icons"
+msgstr ""
+
+#: inc/customizer.php:240
+msgid "Social Icons"
+msgstr ""
+
+#: inc/customizer.php:245
+msgid "Slider"
+msgstr ""
+
+#: inc/customizer.php:257
+msgid "Enable slider section"
+msgstr ""
+
+#: inc/customizer.php:269
+msgid "Slider Category"
+msgstr ""
+
+#: inc/customizer.php:272
+msgid "Select a category for the featured post slider"
+msgstr ""
+
+#: inc/customizer.php:286
+msgid "Number Of Slides To Show - i.e 10 (default is 3)"
+msgstr ""
+
+#: inc/customizer.php:293
+msgid "Search Section"
+msgstr ""
+
+#: inc/customizer.php:305
+msgid "Enable search form on homepage"
+msgstr ""
+
+#: inc/customizer.php:313
+msgid "Blog Settings"
+msgstr ""
+
+#: inc/customizer.php:327
+msgid "Blog Title"
+msgstr ""
+
+#: inc/customizer.php:339 inc/customizer.php:416
+msgid "Description"
+msgstr ""
+
+#: inc/customizer.php:350
+msgid "Enable/Disable Related Post"
+msgstr ""
+
+#: inc/customizer.php:364
+msgid "Related Post Count"
+msgstr ""
+
+#: inc/customizer.php:370
+msgid "Featured Item"
+msgstr ""
+
+#: inc/customizer.php:386
+msgid "Enable this section?"
+msgstr ""
+
+#: inc/customizer.php:395
+msgid "Title of the item"
+msgstr ""
+
+#: inc/customizer.php:403
+msgid "Heading"
+msgstr ""
+
+#: inc/customizer.php:428
+msgid "Button Text"
+msgstr ""
+
+#: inc/customizer.php:440
+msgid "Button Link"
+msgstr ""
+
+#: inc/customizer.php:455
+msgid "Add a featured image"
+msgstr ""
+
+#: inc/customizer.php:474
+msgid "Add a background image"
+msgstr ""
+
+#: inc/customizer.php:489
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer.php:490
+msgid "Add a background overlay to add contrast to headings & descriptions."
+msgstr ""
+
+#: inc/customizer.php:503
+msgid "Background Transparency"
+msgstr ""
+
+#: inc/customizer.php:504
+msgid "Change the opacity of the above background color."
+msgstr ""
+
+#: inc/lib/related-post.php:22
+msgid "Related Posts"
+msgstr ""
+
+#: inc/lib/theme-info.php:41
+msgid "Documentation"
+msgstr ""
+
+#: inc/lib/theme-info.php:45
+msgid "Demo"
+msgstr ""
+
+#: inc/lib/theme-info.php:49
+msgid "Leave a review"
+msgstr ""
+
+#: inc/lib/theme-info.php:53
+msgid "Buy us a coffee"
+msgstr ""
+
 #: inc/template-tags.php:29
 #, php-format
-#@ _s
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#. translators: %s: post author.
 #: inc/template-tags.php:35
 #, php-format
-#@ _s
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:52
-#@ _s
 msgid ", "
 msgstr ""
 
-#. translators: 1: list of categories.
 #: inc/template-tags.php:55
 #, php-format
-#@ _s
 msgid "Posted in %1$s"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:59
-#, php-format
-#@ _s
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
-#. translators: 1: list of tags.
 #: inc/template-tags.php:62
+#, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
-#. translators: %s: post title
 #: inc/template-tags.php:72
 #, php-format
-#@ _s
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:89 template-parts/content-page.php:35
+#: inc/template-tags.php:89 template-parts/content-page.php:32
 #, php-format
-#@ _s
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#. translators: %s: search query.
-#: search.php:21
+#: inc/widgets/recentpost.php:11 inc/widgets/recentpost.php:138
+msgid "The most recent posts on your site with thumbnails"
+msgstr ""
+
+#: inc/widgets/recentpost.php:12
+msgid "atoZ Recent Posts"
+msgstr ""
+
+#: inc/widgets/recentpost.php:39
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/widgets/recentpost.php:123
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/recentpost.php:126
+msgid "Number of posts to show:"
+msgstr ""
+
+#: inc/widgets/recentpost.php:130
+msgid "Display post date?"
+msgstr ""
+
+#: inc/widgets/recentpost.php:140
+msgid "atoz Recent Posts"
+msgstr ""
+
+#: inc/widgets/social.php:12
+msgid "A to Z -Sidebar social widget"
+msgstr ""
+
+#: inc/widgets/social.php:14
+msgid "Display a Premium or Feature description."
+msgstr ""
+
+#: inc/widgets/social.php:106
+msgid "Social Title"
+msgstr ""
+
+#: inc/widgets/social.php:114
+msgid "Facebook Url"
+msgstr ""
+
+#: inc/widgets/social.php:124
+msgid "Twitter Url"
+msgstr ""
+
+#: inc/widgets/social.php:135
+msgid "Google Url"
+msgstr ""
+
+#: inc/widgets/social.php:146
+msgid "Instagram Title"
+msgstr ""
+
+#: inc/widgets/social.php:156
+msgid "Dribbble Url"
+msgstr ""
+
+#: inc/widgets/social.php:167
+msgid "Behance Url"
+msgstr ""
+
+#: search.php:24
 #, php-format
-#@ _s
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/content-none.php:14
-#@ _s
+#: searchform.php:10
+msgctxt "placeholder"
+msgid "Type Here&hellip;"
+msgstr ""
+
+#: searchform.php:10
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:11
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: single.php:65
+msgid "Share on :"
+msgstr ""
+
+#: single.php:67
+msgid "Share this post on Facebook!"
+msgstr ""
+
+#: single.php:70
+msgid "Share this post on Twitter!"
+msgstr ""
+
+#: single.php:73
+msgid "Share this post on Google Plus!"
+msgstr ""
+
+#: single.php:76
+msgid "Share this post on Dribbble!"
+msgstr ""
+
+#: single.php:79
+msgid "Share on instagram"
+msgstr ""
+
+#: single.php:88
+msgid "Authored By:"
+msgstr ""
+
+#: template-parts/content-none.php:15
 msgid "Nothing Found"
 msgstr ""
 
-#. translators: 1: link to WP admin new post page.
-#: template-parts/content-none.php:25
+#: template-parts/content-none.php:26
 #, php-format
-#@ _s
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-none.php:38
-#@ _s
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+#: template-parts/content-none.php:39
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:44
-#@ _s
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+#: template-parts/content-none.php:45
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
-#@ _s
-#: template-parts/content-page.php:22 template-parts/content.php:45
+#: template-parts/content-page.php:19
 msgid "Pages:"
 msgstr ""
 
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:34
-#, php-format
-#@ _s
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
 #. Theme Name of the plugin/theme
-#@ _s
-msgid "_s"
+msgid "atoz"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-#@ _s
-msgid "http://underscores.me/"
+msgid "https://dcrazed.com/themes/atoz/"
 msgstr ""
 
 #. Description of the plugin/theme
-#@ _s
-msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
+msgid ""
+"atoz is a simple and creative personal blog theme for designers, developers "
+"who are into blogging. Showcase your freebies easily with this free "
+"wordpress blog theme."
 msgstr ""
 
 #. Author of the plugin/theme
-#@ _s
-msgid "Automattic"
+msgid "Dcrazed"
 msgstr ""
 
 #. Author URI of the plugin/theme
-#@ _s
-msgid "http://automattic.com/"
+msgid "https://dcrazed.com/"
 msgstr ""

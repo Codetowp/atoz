@@ -66,8 +66,8 @@ get_header(); ?>
             
 						<?php 	
 							the_posts_pagination( array(
-								'prev_text' =>   __( '<<', 'atoz' ),
-								'next_text' => __( '>>', 'atoz' )  ,
+								'prev_text' =>   esc_attr( '<<', 'atoz' ),
+								'next_text' => esc_attr( '>>', 'atoz' )  ,
 							) );
 						?>
            
@@ -87,7 +87,7 @@ get_header(); ?>
     $atoz_background_img   = esc_url( get_theme_mod( 'atoz_bg_image' ) );   
     $atoz_background_img_static   = get_template_directory_uri()."/img/article-bg.jpg";
     $back_grd_img = $atoz_background_img ? "$atoz_background_img" : "$atoz_background_img_static";  
-   $atoz_quote_bg_color=  esc_attr(get_theme_mod( 'atoz_quote_bg_color', esc_html__('#f4d629', 'atoz')));
+   $atoz_quote_bg_color=  esc_attr(get_theme_mod( 'atoz_quote_bg_color', esc_attr('#f4d629', 'atoz')));
 ?>
 <section id="service" class="service" style="background-image:url(<?php echo $back_grd_img;?>);?>;" style="background-color:<?php echo wp_kses_post($atoz_quote_bg_color);?>;">
   <div class="container">

@@ -74,7 +74,7 @@ $r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' =
                   
                    <p class="by-author"><a href="<?php the_permalink() ?>">Read more</a></p>
                   <?php if ( $show_date ) : ?>
-                <p class="dter"><?php echo get_the_date(); ?></p>
+                <span class="post-date"><?php echo get_the_date(); ?></span>
                    <?php endif;
 
  //thirst_number_comments();
