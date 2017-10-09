@@ -69,12 +69,9 @@ get_header(); ?>
 								'prev_text' =>   esc_attr( '<<', 'atoz' ),
 								'next_text' => esc_attr( '>>', 'atoz' )  ,
 							) );
-						?>
-           
+						?>           
         
-		<?php wp_reset_postdata(); ?>
-                
-          
+		<?php wp_reset_postdata(); ?>           
 		<?php else : ?>
 		<p><?php _e( 'Sorry, no posts matched your criteria.', 'atoz' ); ?></p>	
 		<?php endif; ?>	

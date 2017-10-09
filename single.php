@@ -23,7 +23,7 @@ get_header(); ?>
                 echo '<a class="category" href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a> ';
               }
               }
-              ?>
+              ?> 
 			<h1><?php the_title(); ?> </h1>
 			<header class="entry-header">
 				<a href="#"> </a>
