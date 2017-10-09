@@ -127,8 +127,8 @@ function print_all_head_styles(){
 		}
 	$accent_color= get_theme_mod('atoz_accent_color')	;
 	if ( $accent_color ) {
-			echo "\n" . '.post-categories a, .fnav a, .nav a, a.page-numbers, a , #sb-imgbox .blog-box-inn p{ color: ' . $accent_color . '}' ;
-			echo "\n" . '.search, .btn-outline-primary, .btn-default, #single-banner .tag, .author-box .author-box-title a{ background-color: ' . $accent_color . '}' ;
+			echo "\n" . '.post-categories a, .fnav a, .nav a, a.page-numbers, a , #sb-imgbox .blog-box-inn p { color: ' . $accent_color . '}' ;
+			echo "\n" . '.search, .btn-outline-primary, .btn-default, #single-banner .tag, .author-box .author-box-title a, #single-banner .category{ background-color: ' . $accent_color . '}' ;
 			echo "\n" . '.btn-default:hover{ background-color: ' . $accent_color . '}' ;
 			echo "\n" . '.nav-links span.current{ background-color: ' . $accent_color . '; border: ' . $accent_color . '}' ;
 			echo "\n" . '.nav-links a:hover{ background-color: ' . $accent_color . '; border: ' . $accent_color . '}' ;
