@@ -25,11 +25,11 @@ function atoz_related_post() {
 			while ( $related->have_posts() ) {
 				$related->the_post();
                 
-               /*  if( get_theme_mod( 'atoz_related_post_check' ) == 1 ) { 
+                 if( get_theme_mod( 'atoz_related_post_check' ) == 1 ) { 
                      
 				$post_thumbnail = get_the_post_thumbnail( get_the_ID('atoz_related_posts'), 'img-responsive blog-img' );
                      
-                }*/
+                }
                 if  ( get_the_post_thumbnail()=='')
                 {
                      $background_img_relatedpost   = get_template_directory_uri()."/img/default.jpg";
