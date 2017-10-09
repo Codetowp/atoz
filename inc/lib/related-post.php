@@ -25,11 +25,11 @@ function atoz_related_post() {
 			while ( $related->have_posts() ) {
 				$related->the_post();
                 
-                 if( get_theme_mod( 'atoz_related_post_check' ) == 1 ) { 
+               /*  if( get_theme_mod( 'atoz_related_post_check' ) == 1 ) { 
                      
-				$post_thumbnail = get_the_post_thumbnail( get_the_ID(''), 'img-responsive blog-img' );
+				$post_thumbnail = get_the_post_thumbnail( get_the_ID('atoz_related_posts'), 'img-responsive blog-img' );
                      
-                }
+                }*/
                 if  ( get_the_post_thumbnail()=='')
                 {
                      $background_img_relatedpost   = get_template_directory_uri()."/img/default.jpg";
@@ -38,15 +38,12 @@ function atoz_related_post() {
                 }
                 else
                 {
-                    $post_thumbnail = get_the_post_thumbnail( get_the_ID('atoz_related_posts'), 'img-responsive blog-img' );
+                    //$post_thumbnail = get_the_post_thumbnail( get_the_ID(), 'img-responsive blog-img' );
+                    $post_thumbnail = get_the_post_thumbnail( get_the_ID(),'atoz_related_posts', ['class' => 'img-responsive blog-img', 'title' => 'Feature image']);
+
                 }
                 
-				$class_format = '';
-                
-				if  ( get_the_post_thumbnail() !='' )
-				$class_format = 'fa-format-' . get_post_format( get_the_ID() );
-                
-                 $title=get_the_title();
+                $title=get_the_title();
                 
                 global $post;
                 $categories = get_the_category($post->ID);
@@ -54,19 +51,18 @@ function atoz_related_post() {
                 
 				printf('<article class="col-md-4 col-sm-4">
                         <div class="blog-box-inn eq-blocks"> 
-                        <span>%s</span>
-                        %s
-                            <h2>%s</h2>
-                            <p>'.$categories[0]->cat_name.
-                        '</p>
+                        <span>%s</span>%s
+                        <h2>%s</h2>
+                            <a href="%s"><p>'.$categories[0]->cat_name.
+                        '</p></a>
                             <a href="%s" class="btn btn-default">View</a>  
                         </div>
                      </article>',
                     get_the_date(),
 					$post_thumbnail,
                     $title,
-                    esc_url( get_permalink() ),
-                    $class_format
+                    $cat_link,
+                    esc_url( get_permalink() )
 				);
 				?>
 			<?php
