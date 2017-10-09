@@ -24,12 +24,7 @@ function atoz_related_post() {
             $num = 0;
 			while ( $related->have_posts() ) {
 				$related->the_post();
-                
-                 if( get_theme_mod( 'atoz_related_post_check' ) == 1 ) { 
-                     
-				$post_thumbnail = get_the_post_thumbnail( get_the_ID('atoz_related_posts'), 'img-responsive blog-img' );
-                     
-                }
+
                 if  ( get_the_post_thumbnail()=='')
                 {
                      $background_img_relatedpost   = get_template_directory_uri()."/img/default.jpg";
@@ -48,7 +43,6 @@ function atoz_related_post() {
                 global $post;
                 $categories = get_the_category($post->ID);
                 $cat_link = get_category_link($categories[0]->cat_ID);
-                
 				printf('<article class="col-md-4 col-sm-4">
                         <div class="blog-box-inn eq-blocks"> 
                         <span>%s</span>%s
@@ -63,7 +57,7 @@ function atoz_related_post() {
                     $title,
                     $cat_link,
                     esc_url( get_permalink() )
-				);
+				); 
 				?>
 			<?php
 			}

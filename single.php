@@ -101,7 +101,7 @@ get_header(); ?>
     </div>
   </div>
 </div>
-
+<?php if( get_theme_mod( 'atoz_related_post_check' ) == 1 ) { ?>
 <!-- Related Posts -->
 <section id="sb-imgbox">
   <div class="container">
@@ -111,5 +111,6 @@ get_header(); ?>
     </div>
   </div>
 </section>
+<?php } ?>
 <?php
 get_footer();
