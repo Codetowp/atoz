@@ -83,7 +83,7 @@ function atoz_customize_register( $wp_customize ) {
 			<label>
 				<div style="display:flex;flex-direction: row;justify-content: flex-start;">
 					<span class="customize-control-title" style="flex: 2 0 0; vertical-align: middle;"><?php echo esc_html( $this->label ); ?></span>
-					<input id="cb<?php echo $this->instance_number ?>" type="checkbox" class="tgl tgl-<?php echo $this->type?>" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); checked( $this->value() ); ?> />
+					<input id="cb<?php echo $this->instance_number ?>" type="checkbox" class="tgl tgl-<?php echo $this->type?>" value="<?php echo esc_html( $this->value() ); ?>" <?php $this->link(); checked( $this->value() ); ?> />
 					<label for="cb<?php echo $this->instance_number ?>" class="tgl-btn"></label>
 				</div>
 				<?php if ( ! empty( $this->description ) ) : ?>
@@ -155,7 +155,7 @@ function atoz_customize_register( $wp_customize ) {
     ) );    
     $wp_customize->add_control ( new WP_Customize_Color_Control (
         $wp_customize, 'atoz_nav_text_color', array(
-            'label'                       => esc_attr__( 'Navigation Text', 'atoz' ),
+            'label'                       => esc_html__( 'Navigation Text', 'atoz' ),
             'section'                     => 'colors',
     ) ) );    	
 	$wp_customize->add_setting( 'atoz_nav_bg', array(
@@ -170,7 +170,7 @@ function atoz_customize_register( $wp_customize ) {
     ) );   
     $wp_customize->add_control ( new WP_Customize_Color_Control (
         $wp_customize, 'atoz_submenu_bg', array(
-            'label'                       => esc_attr__( 'Sub Menu Bg', 'atoz' ),
+            'label'                       => esc_html__( 'Sub Menu Bg', 'atoz' ),
             'section'                     => 'colors',
     ) ) ); 
 	$wp_customize->add_setting( 'atoz_menu_hover', array(
@@ -180,12 +180,12 @@ function atoz_customize_register( $wp_customize ) {
     ) );   
     $wp_customize->add_control ( new WP_Customize_Color_Control (
         $wp_customize, 'atoz_menu_hover', array(
-            'label'                       => esc_attr__( 'Menu Hover Color', 'atoz' ),
+            'label'                       => esc_html__( 'Menu Hover Color', 'atoz' ),
             'section'                     => 'colors',
     ) ) );  	
     $wp_customize->add_control ( new WP_Customize_Color_Control (
         $wp_customize, 'atoz_nav_bg', array(
-            'label'                       => esc_attr__( 'Navigation Background', 'atoz' ),
+            'label'                       => esc_html__( 'Navigation Background', 'atoz' ),
             'section'                     => 'colors',
     ) ) );   
      $wp_customize->add_setting( 'atoz_accent_color', 
@@ -196,8 +196,8 @@ function atoz_customize_register( $wp_customize ) {
             ) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'atoz_accent_color', 
            array(
-			'label'      => esc_attr__( 'Accent Color', 'atoz' ),
-			'description' => esc_attr__( 'Add Accent Color to post,button.', 'atoz' ),
+			'label'      => esc_html__( 'Accent Color', 'atoz' ),
+			'description' => esc_html__( 'Add Accent Color to post,button.', 'atoz' ),
 			'section'    => 'colors',
 		) ) ); 
     $wp_customize->add_setting( 'atoz_footer_text_color', array(
@@ -207,7 +207,7 @@ function atoz_customize_register( $wp_customize ) {
     ) );    
     $wp_customize->add_control ( new WP_Customize_Color_Control (
         $wp_customize, 'atoz_footer_text_color', array(
-            'label'                       => esc_attr__( 'Footer Text', 'atoz' ),
+            'label'                       => esc_html__( 'Footer Text', 'atoz' ),
             'section'                     => 'colors',
     ) ) );    
     $wp_customize->add_setting( 'atoz_footer_bck_color', array(
@@ -217,7 +217,7 @@ function atoz_customize_register( $wp_customize ) {
     ) );    
     $wp_customize->add_control ( new WP_Customize_Color_Control (
         $wp_customize, 'atoz_footer_bck_color', array(
-            'label'                       => esc_attr__( 'Footer Background', 'atoz' ),
+            'label'                       => esc_html__( 'Footer Background', 'atoz' ),
             'section'                     => 'colors',
     ) ) );  
 	$wp_customize->add_setting( 'atoz_fontawesome_icons', array(
@@ -227,7 +227,7 @@ function atoz_customize_register( $wp_customize ) {
     ) );    
     $wp_customize->add_control ( new WP_Customize_Color_Control (
         $wp_customize, 'atoz_fontawesome_icons', array(
-            'label'                       => esc_attr__( 'Font Awesome Icons', 'atoz' ),
+            'label'                       => esc_html__( 'All Font Awesome Icons', 'atoz' ),
             'section'                     => 'colors',
     ) ) ); 	
 	$wp_customize->add_setting( 'atoz_social_icon_color', array(
@@ -237,7 +237,7 @@ function atoz_customize_register( $wp_customize ) {
     ) );    
     $wp_customize->add_control ( new WP_Customize_Color_Control (
         $wp_customize, 'atoz_social_icon_color', array(
-            'label'                       => esc_attr__( 'Social Icons', 'atoz' ),
+            'label'                       => esc_html__( 'Footer Social Icons', 'atoz' ),
             'section'                     => 'colors',
     ) ) );  
     /*Slider*/
@@ -486,8 +486,8 @@ function atoz_customize_register( $wp_customize ) {
 				) );
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'atoz_quote_bg_color', 
 			   array(
-				'label'      => esc_attr__( 'Background Color', 'atoz' ),
-				'description' => esc_attr__( 'Add a background overlay to add contrast to headings & descriptions.', 'atoz' ),
+				'label'      => esc_html__( 'Background Color', 'atoz' ),
+				'description' => esc_html__( 'Add a background overlay to add contrast to headings & descriptions.', 'atoz' ),
 				'section'    => 'atoz_calender',
 			) ) );			
 		$wp_customize->add_setting( 'atoz_transparnt', 
@@ -500,8 +500,8 @@ function atoz_customize_register( $wp_customize ) {
 			   array(
 				'type' => 'text',
 				'section' => 'atoz_calender',
-				'label' => esc_attr__( "Background Transparency", 'atoz' ),
-				'description' => esc_attr__( 'Change the opacity of the above background color.', 'atoz' ),
+				'label' => esc_html__( "Background Transparency", 'atoz' ),
+				'description' => esc_html__( 'Change the opacity of the above background color.', 'atoz' ),
 			) );
     
     

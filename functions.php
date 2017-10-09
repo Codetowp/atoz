@@ -130,6 +130,10 @@ function print_all_head_styles(){
 			echo "\n" . '.post-categories a, .fnav a, .nav a, a.page-numbers, a , #sb-imgbox .blog-box-inn p{ color: ' . $accent_color . '}' ;
 			echo "\n" . '.search, .btn-outline-primary, .btn-default, #single-banner .tag, .author-box .author-box-title a{ background-color: ' . $accent_color . '}' ;
 			echo "\n" . '.btn-default:hover{ background-color: ' . $accent_color . '}' ;
+			echo "\n" . '.nav-links span.current{ background-color: ' . $accent_color . '; border: ' . $accent_color . '}' ;
+			echo "\n" . '.nav-links a:hover{ background-color: ' . $accent_color . '; border: ' . $accent_color . '}' ;
+			echo "\n" . '.nav-links a.page-numbers{border-color: ' . $accent_color . '}' ;
+        
 		}	
 	$fontawesome_icons = get_theme_mod('atoz_fontawesome_icons');
 	if ( $fontawesome_icons ) {
