@@ -27,7 +27,7 @@ function atoz_related_post() {
                 
                  if( get_theme_mod( 'atoz_related_post_check' ) == 1 ) { 
                      
-				$post_thumbnail = get_the_post_thumbnail( get_the_ID('atoz_related_posts'), 'img-responsive blog-img' );
+				$post_thumbnail = get_the_post_thumbnail( get_the_ID(),'atoz_related_posts', 'img-responsive blog-img' );
                      
                 }
                 if  ( get_the_post_thumbnail()=='')
