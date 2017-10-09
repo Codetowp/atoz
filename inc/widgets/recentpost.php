@@ -55,7 +55,7 @@ $r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' =
                      
                  if  ( get_the_post_thumbnail()=='')
                 {
-                     $background_img_relatedpost   = get_template_directory_uri()."/img/blog-1.jpg";
+                     $background_img_relatedpost   = get_template_directory_uri()."/img/default.jpg";
                     
                    echo  $post_thumbnail= '<img src="'.$background_img_relatedpost.'">';
                 }
