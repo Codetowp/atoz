@@ -131,7 +131,7 @@ function atoz_featured_slider() {
             <p><?php //$content=get_the_content();
                        // echo  $trimmed = wp_trim_words( $content, $num_words = 10, $more = null ); ?></p>
 						<p><?php the_excerpt(); ?></p>
-            <a href="<?php the_permalink(); ?>" class="btn btn-outline-primary"><?php _e( 'Take a look', 'textdomain' ); ?></a> </div>
+            <a href="<?php the_permalink(); ?>" class="btn btn-outline-primary"><?php _e( 'Take a look', 'atoz' ); ?></a> </div>
         </div>
       </div>
     
