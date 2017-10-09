@@ -13,10 +13,10 @@
         <div class="blog-box-inn eq-blocks"> <span><?php echo get_the_date('M d');?></span> 
             <?php
             if  ( get_the_post_thumbnail()!='')
-            {
-             the_post_thumbnail('atoz_home_posts'); 
+            {?><a href="<?php the_permalink();?>"><?php
+             the_post_thumbnail('atoz_home_posts'); ?></a><?php
             }else{?>
-            <img src="<?php echo get_template_directory_uri()?>/img/default.jpg" alt="<?php the_title_attribute(); ?>" class="img-responsive blog-img">
+            <a href="<?php the_permalink();?>"><img src="<?php echo get_template_directory_uri()?>/img/default.jpg" alt="<?php the_title_attribute(); ?>" class="img-responsive blog-img"></a>
             <?php }?>
             <h2><a href="<?php the_permalink();?>" class="eq-blocks-title"><?php the_title();?></a></h2>
           <?php the_category();?>
