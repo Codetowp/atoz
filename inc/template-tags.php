@@ -112,12 +112,8 @@ function atoz_featured_slider() {
        $slidecat =get_option( 'atoz_slide_categories' );
 
         $query = new WP_Query( array( 'cat' =>$slidecat,'posts_per_page' =>$count ) );
-    
-    
-        
-        
+ 
         if ( is_front_page() ) :
-    
     
         if ($query->have_posts()) :
           while ($query->have_posts()) : $query->the_post();
@@ -128,16 +124,14 @@ function atoz_featured_slider() {
             if  ( get_the_post_thumbnail()!='')
             {
              the_post_thumbnail('atoz_slider'); 
-            }else{?>
-          <img src="<?php echo get_template_directory_uri()?>/img/photo2.jpg" class="img-responsive" width="80" >
-          <?php } ?>
+            }?>
         <div class="carousel-caption animated fadeInRight" >
           <div class=" col-md-12 heading">
             <h1><?php the_title();?></h1>
             <p><?php //$content=get_the_content();
                        // echo  $trimmed = wp_trim_words( $content, $num_words = 10, $more = null ); ?></p>
 						<p><?php the_excerpt(); ?></p>
-            <a href="<?php the_permalink(); ?>" class="btn btn-outline-primary">Take a Look</a> </div>
+            <a href="<?php the_permalink(); ?>" class="btn btn-outline-primary"><?php _e( 'Take a look', 'textdomain' ); ?></a> </div>
         </div>
       </div>
     
