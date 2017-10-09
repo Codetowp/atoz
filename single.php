@@ -13,11 +13,7 @@ get_header(); ?>
     <div class="content wow fdeInUp">
       <div class="container">
            <?php 
-               $args = array(
-                    'orderby' => 'name',
-                    'parent' => 0
-                    );
-              $categories = get_categories( $args );
+              $categories = get_the_category();
               if($categories!=''){
               foreach ( $categories as $category ) {
                 echo '<a class="category" href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a> ';
