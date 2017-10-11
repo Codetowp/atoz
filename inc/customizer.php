@@ -634,3 +634,11 @@ function customizer_custom_scripts() { ?>
 </script>
 
 <?php }?>
+
+<?php
+
+function atoz_customizer_css() {
+		wp_enqueue_style( 'atoz-customizer-css', get_template_directory_uri() . '/css/customizer.css' );
+	}
+
+	add_action( 'customize_controls_print_styles', 'atoz_customizer_css' );

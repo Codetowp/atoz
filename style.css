@@ -709,7 +709,7 @@ embed, iframe, object {
 	display: inline-block;
 }
 
-.custom-logo-link img{max-width: 126px; object-fit: cover; max-height:50px; }
+.custom-logo-link img{max-width: 48px; object-fit: cover; max-height:50px; }
 
 /*--------------------------------------------------------------
 ## Captions
