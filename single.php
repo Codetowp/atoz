@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <?php if(have_posts() ) : while(have_posts() ) : the_post(); ?>     
-<div id="single-banner" style="background-image:url('<?php echo esc_url(the_post_thumbnail_url('atoz_single_post')); ?>'); "> 
+<div id="single-banner" style="background-image:url('<?php the_post_thumbnail_url('atoz_single_post'); ?>'); "> 
     <div class="content wow fdeInUp">
 		<div class="container">
 			<?php 
@@ -27,7 +27,7 @@ get_header(); ?>
 			</header>
 			<!--breadcrumb-->
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><?php get_breadcrumb(); ?></li>
+				<li class="breadcrumb-item"><?php atoz_get_breadcrumb(); ?></li>
 			</ol>
 		</div>
     </div>
@@ -37,7 +37,7 @@ get_header(); ?>
 <!--Content Body-->
 <div id="single-body">
 	<div class="container">
-		<div class="row wow fadeInUp">
+		<div class="row">
 			<!--blog posts container-->
 			<div class="col-md-8 col-sm-8 single-post <?php background_color(); ?>">
 				<?php if ( have_posts() ) : /* Start the Loop */ while ( have_posts() ) : the_post(); ?>
@@ -46,9 +46,11 @@ get_header(); ?>
 				<!--Footer tags-->
 				<footer class="entry-footer entry-meta-bar">
 					<div class="entry-meta">
-						<span class="tag-links">
-							<?php echo get_the_tag_list('Tagged in: ',', '); ?>              
-						</span>
+						<?php $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'atoz' ) );
+						if ( $tags_list ) {
+						/* translators: 1: list of tags. */
+						printf( '<span class="tags-links">' . esc_html__( 'Tagged: %1$s', 'atoz' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+						}?>							
 					</div>
 				</footer>
 				<?php endwhile; endif;?>

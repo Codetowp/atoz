@@ -25,8 +25,7 @@
 		value.bind( function( to ) {
 			$( '.service' ).text( to );
 		} );
-	} );
-    
+	} );    
     
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {
@@ -46,8 +45,7 @@
 				} );
 			}
 		} );
-	} );
-    
+	} );    
     
     /*blog details*/
      wp.customize( 'atoz_post_check', function( value ) {
@@ -84,9 +82,7 @@
 			} );
 		} ); 
     
-    /*calender details*/
-    
-    
+    /*calender details*/  
     
      wp.customize( 'atoz_Featured_check', function( value ) {
 			value.bind( function( to ) {
@@ -168,7 +164,7 @@
 		} ); 
       wp.customize( 'atoz_accent_color', function( value ) {
 			value.bind( function( to ) {
-				$( '.search, .btn-outline-primary' ).css( 'background-color', to );
+				$( '.search, .btn-outline-primary,.nav-links span.current' ).css( 'background-color', to );
 			} );
 		} );
 		      wp.customize( 'atoz_accent_color', function( value ) {
@@ -176,6 +172,12 @@
 				$( '.fnav a' ).css( 'color', to );
 			} );
 		} );
+		        wp.customize( 'atoz_accent_color', function( value ) {
+			value.bind( function( to ) {
+				$( '.post-categories a,.nav-links a:hover, .posted-on a' ).css( 'color', to );
+			} );
+		} );
+
     wp.customize( 'atoz_accent_color', function( value ) {
 			value.bind( function( to ) {
 				$( '.btn-default' ).css( 'background-color', to );
@@ -196,7 +198,11 @@
 				$( 'footer i.fa:hover' ).css( 'background-color', to );
 			} );
 		} );
-   
+		  wp.customize( 'atoz_accent_color', function( value ) {
+			value.bind( function( to ) {
+				$( '.nav-links a.page-numbers' ).css( 'border-color', to );
+			} );
+		} );   
     
     ///////footer background color
     wp.customize( 'atoz_footer_bck_color', function( value ) {
